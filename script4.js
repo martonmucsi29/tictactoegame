@@ -21,13 +21,13 @@ function clickCell(cell) {
   cell.textContent = currentPlayer;
 
   if (checkWin()) {
-    statusText.textContent = `${currentPlayer} nyert 🎉`;
+    statusText.textContent = `${currentPlayer} nyert`;
     active = false;
     return;
   }
 
   if ([...cells].every(c => c.textContent)) {
-    statusText.textContent = "Döntetlen 😅";
+    statusText.textContent = "Döntetlen";
     active = false;
     return;
   }

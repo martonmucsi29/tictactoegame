@@ -23,9 +23,19 @@
     border-radius: 20px;
     text-align: center;
     color: white;
-    width: 440px;
+  }
+
+  .game-width3{
+    width: 350;
   }
   
+  .game-width4{
+    width: 440;
+  }
+  
+  .game-width6{
+    width: 570;
+  }
   .board3 {
     display: grid;
     grid-template-columns: repeat(3, 80px);
@@ -42,9 +52,9 @@
     margin: 20px 0;
   }
 
-  .board5 {
+  .board6 {
     display: grid;
-    grid-template-columns: repeat(4, 80px);
+    grid-template-columns: repeat(6, 80px);
     gap: 10px;
     justify-content: center;
     margin: 20px 0;
