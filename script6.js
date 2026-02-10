@@ -1,8 +1,10 @@
-const cells = document.querySelectorAll(".cell");
+const cells = document.querySelectorAll(".cell6");
 const statusText = document.getElementById("status");
 const resetBtn = document.getElementById("reset");
 
-let currentPlayer = "X";
+let players = ["X", "O", "+"];
+let currentIndex = 0;
+let currentPlayer = players[currentIndex];
 let active = true;
 
 const wins6 = [ 
@@ -33,8 +35,8 @@ function clickCell(cell) {
     active = false;
     return;
   }
-
-  currentPlayer = currentPlayer === "X" ? "O" : "X";
+  currentIndex = (currentIndex + 1) % players.length;
+  currentPlayer = players[currentIndex];  
   statusText.textContent = `${currentPlayer} jön`;
 }
 

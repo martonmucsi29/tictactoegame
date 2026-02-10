@@ -1,4 +1,4 @@
-const cells = document.querySelectorAll(".cell");
+const cells = document.querySelectorAll(".cell4");
 const statusText = document.getElementById("status");
 const resetBtn = document.getElementById("reset");
 

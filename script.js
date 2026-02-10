@@ -38,20 +38,13 @@ function clickCell(cell, index) {
 }
 
 function checkWin() {
-  return wins3.some(combo => {
-    const [a,b,c] = combo;
-    if (
-      cells[a].textContent &&
-      cells[a].textContent === cells[b].textContent &&
-      cells[a].textContent === cells[c].textContent
-    ) {
-      cells[a].classList.add("win");
-      cells[b].classList.add("win");
-      cells[c].classList.add("win");
+  for (const combo of wins3) {
+    if (combo.every(i => cells[i].textContent === currentPlayer)) {
+      combo.forEach(i => cells[i].classList.add("win"));
       return true;
     }
-    return false;
-  });
+  }
+  return false;
 }
 
 resetBtn.addEventListener("click", () => {
