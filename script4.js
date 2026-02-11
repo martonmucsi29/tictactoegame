@@ -21,19 +21,19 @@ function clickCell(cell) {
   cell.textContent = currentPlayer;
 
   if (checkWin()) {
-    statusText.textContent = `${currentPlayer} nyert`;
+    statusText.textContent = `${currentPlayer} won`;
     active = false;
     return;
   }
 
   if ([...cells].every(c => c.textContent)) {
-    statusText.textContent = "Döntetlen";
+    statusText.textContent = "Tied";
     active = false;
     return;
   }
 
   currentPlayer = currentPlayer === "X" ? "O" : "X";
-  statusText.textContent = `${currentPlayer} jön`;
+  statusText.textContent = `${currentPlayer}`;
 }
 
 function checkWin() {
@@ -49,7 +49,7 @@ function checkWin() {
 resetBtn.addEventListener("click", () => {
   currentPlayer = "X";
   active = true;
-  statusText.textContent = "X jön";
+  statusText.textContent = "X";
   cells.forEach(c => {
     c.textContent = "";
     c.classList.remove("win");
