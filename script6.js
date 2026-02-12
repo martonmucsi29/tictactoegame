@@ -51,11 +51,5 @@ function checkWin() {
 }
 
 resetBtn.addEventListener("click", () => {
-  currentPlayer = "X";
-  active = true;
-  statusText.textContent = "X";
-  cells.forEach(c => {
-    c.textContent = "";
-    c.classList.remove("win");
+  location.reload();
   });
-});
